@@ -5,6 +5,8 @@
         @include('snippets.error')
 
         {!! Form::open(['url' => 'ships/save']) !!}
+            {!! Form::select('manufacturer_id',ManufacturerClass::orderBy('name')->get()->pluck('name','id'),null, ['class'=>'form-control'])!!}
+            <br/>
             {!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'Schiffsname...']) !!}
             <br/>
             {!! Form::text('built', null, ['class'=>'form-control', 'placeholder'=>'Baujahr...']) !!}
@@ -14,6 +16,8 @@
             {!! Form::text('length', null, ['class'=>'form-control', 'placeholder'=>'Schiffslänge...']) !!}
             <br/>
             {!! Form::text('height', null, ['class'=>'form-control', 'placeholder'=>'Schiffshöhe...']) !!}
+            <br/>
+            {!! Form::text('color', null, ['class'=>'form-control', 'placeholder'=>'Schiffshöhe...']) !!}
             <br/>
             {!! Form::text('brt', null, ['class'=>'form-control', 'placeholder'=>'BRT...']) !!}
             <br/>

@@ -13,6 +13,7 @@
     <title>Schiffsdatenbank</title>
   </head>
   <body>
+    @yield('navbar')
     <form method="post" action="{{url('logout')}}">
       @csrf
       <input type="submit" class="btn btn-danger" value="Abmelden">

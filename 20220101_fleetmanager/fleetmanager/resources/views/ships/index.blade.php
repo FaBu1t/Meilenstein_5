@@ -7,10 +7,12 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Hersteller</th>
                     <th>Built</th>
                     <th>Age</th>
                     <th>Length</th>
                     <th>Height</th>
+                    <th>Color</th>
                     <th>BRT</th>
                     <th>Bearbeiten</th>
                 </tr>
@@ -19,10 +21,12 @@
                 @foreach($entities as $index=>$ship)
                     <tr>
                         <td>{{ $ship->name}}</td>
+                        <td>{{ $ship->manufacturer_id}}</td>
                         <td>{{ $ship->built}}</td>
                         <td>{{ $ship->age}}</td>
                         <td>{{ $ship->length}}</td>
                         <td>{{ $ship->height}}</td>
+                        <td>{{ $ship->color}}</td>
                         <td>{{ $ship->brt}}</td>
                         <td>
                             <a href="{{url('ships/show/'.$ship->id)}}" class="btn btn-success">Show</a>

@@ -229,7 +229,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'ManufacturerClass' => App\Models\Manufacturer::class,
+        'ShipClass' => App\Models\Ship::class,
+        'MinishipClass' => App\Miniship\Ship::class,
     ],
 
 ];

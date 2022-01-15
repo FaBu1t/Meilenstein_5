@@ -15,11 +15,13 @@ class CreateShips extends Migration
     {
         Schema::create('ships', function (Blueprint $table) {
             $table->id();
+            $table->integer('manufacturer_id')->nullable()->unsigned();
             $table->string('name')->nullable();
             $table->string('built')->nullable();
             $table->string('age')->nullable();
             $table->string('length')->nullable();
             $table->string('height')->nullable();
+            $table->string('color')->nullable();
             $table->float('brt')->default(0.0);
             $table->timestamps();
         });

@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ShipController;
 use App\Http\Controllers\BookController;
-
+use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\MinishipController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,6 +41,26 @@ Route::middleware(['auth'])->group(function () {
     Route::post('books/update/{id}', [BookController::class, 'postUpdate']);
     Route::get('books/delete/{id}', [BookController::class, 'getDelete']);
     Route::get('books/json', [BookController::class, 'getJson']);
+
+    Route::get('manufacturers', [ManufacturerController::class, 'getIndex']);
+    Route::get('manufacturers/index', [ManufacturerController::class, 'getIndex']);
+    Route::get('manufacturers/show/{id}', [ManufacturerController::class, 'getShow']);
+    Route::get('manufacturers/add', [ManufacturerController::class, 'getAdd']);
+    Route::post('manufacturers/save', [ManufacturerController::class, 'postSave']);
+    Route::get('manufacturers/edit/{id}', [ManufacturerController::class, 'getEdit']);
+    Route::post('manufacturers/update/{id}', [ManufacturerController::class, 'postUpdate']);
+    Route::get('manufacturers/delete/{id}', [ManufacturerController::class, 'getDelete']);
+    Route::get('manufacturers/json', [ManufacturerController::class, 'getJson']);
+
+    Route::get('miniships', [MinishipController::class, 'getIndex']);
+    Route::get('miniships/index', [MinishipController::class, 'getIndex']);
+    Route::get('miniships/show/{id}', [MinishipController::class, 'getShow']);
+    Route::get('miniships/add', [MinishipController::class, 'getAdd']);
+    Route::post('miniships/save', [MinishipController::class, 'postSave']);
+    Route::get('miniships/edit/{id}', [MinishipController::class, 'getEdit']);
+    Route::post('miniships/update/{id}', [MinishipController::class, 'postUpdate']);
+    Route::get('miniships/delete/{id}', [MinishipController::class, 'getDelete']);
+    Route::get('miniships/json', [MinishipController::class, 'getJson']);
 });
 
 Route::get('/dashboard', function () {
